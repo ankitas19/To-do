@@ -16,10 +16,12 @@ const Form = ({setInputText,todos,setTodos,inputText,setStatus}) => {
   }
 return(
 <form>
-      <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
+  <div>
+      <input placeholder="Enter Your Task" value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
       <button onClick={submitTodoHandler} className="todo-button" type="submit">
-        <i className="fas fa-plus-square"></i>
+        ADD
       </button>
+      </div>
       <div className="select">
         <select onChange={statusHandler} name="todos" className="filter-todo">
           <option value="all">All</option>
